@@ -1,0 +1,12 @@
+﻿  PathFinding.cpp
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,67): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,67): warning C4244:         with
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,67): warning C4244:         [
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,67): warning C4244:             T=float
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,67): warning C4244:         ]
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,39): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,39): warning C4244:         with
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,39): warning C4244:         [
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,39): warning C4244:             T=float
+C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\PathFinding.cpp(98,39): warning C4244:         ]
+  PathFinding.vcxproj -> C:\Users\Agrim Budakoti\Desktop\Playground\Cpp\Projects\PathFinding\x64\Debug\PathFinding.exe
