@@ -14,3 +14,4 @@ public:
 	std::array<Node*, 4> getNeighbours(Node* target);
 	void display();
 };
+int ManhattanDistance(Node* point1, Node* point2);

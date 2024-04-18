@@ -55,3 +55,11 @@ std::array<Node*, 4> Maze::getNeighbours(Node* target) {
 	std::array<Node*, 4> result{ left, top, right, bottom };
 	return result;
 }
+
+int ManhattanDistance(Node* point1, Node* point2) {
+	int x1 = point1->coords[0];
+	int y1 = point1->coords[1];
+	int x2 = point1->coords[0];
+	int y2 = point1->coords[1];
+	return std::abs(x1 - x2) + std::abs(y1 - y2);
+}

@@ -120,10 +120,10 @@ int main(){
 }
 
 static bool solve(Maze &maze, Node* &start, Node* &goal) {
+	// Breadth first search
 	std::deque<Node*> frontier;
 	frontier.push_back(start);
 
-	int counter{ 0 };
 	while (true) {
 		if (frontier.empty()) {
 			std::cerr << "No solution\n";

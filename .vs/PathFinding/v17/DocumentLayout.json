@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:PathFinding.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Pathfinding.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Pathfinding.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Maze.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,12 +19,12 @@
       "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Pathfinding.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Pathfinding.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E29F4AA-3298-430E-8DAE-7FDF9DCECC38}|PathFinding.vcxproj|solutionrelative:Node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,14 +44,14 @@
               "RelativeDocumentMoniker": "PathFinding.cpp",
               "ToolTip": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\PathFinding.cpp",
               "RelativeToolTip": "PathFinding.cpp",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIAAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-13T05:55:35.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Pathfinding.h",
               "DocumentMoniker": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Pathfinding.h",
               "RelativeDocumentMoniker": "Pathfinding.h",
@@ -70,7 +70,7 @@
               "RelativeDocumentMoniker": "Maze.h",
               "ToolTip": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Maze.h",
               "RelativeToolTip": "Maze.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-13T06:19:48.736Z",
               "EditorCaption": ""
@@ -83,14 +83,14 @@
               "RelativeDocumentMoniker": "Maze.cpp",
               "ToolTip": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Maze.cpp",
               "RelativeToolTip": "Maze.cpp",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAABwAAAALAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-13T06:20:09.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Node.h",
               "DocumentMoniker": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.h",
               "RelativeDocumentMoniker": "Node.h",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Node.cpp",
               "DocumentMoniker": "C:\\Users\\Agrim Budakoti\\Desktop\\Playground\\Cpp\\Projects\\PathFinding\\Node.cpp",
               "RelativeDocumentMoniker": "Node.cpp",
