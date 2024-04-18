@@ -17,4 +17,5 @@ public:
 	NodeState state{Undiscovered};
 	Node* parent = nullptr;
 	void display();
+	void displayState();
 };

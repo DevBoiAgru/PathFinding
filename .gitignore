@@ -33,3 +33,6 @@
 
 # vcpkg
 vcpkg_installed/
+
+# visual studio
+.vs/

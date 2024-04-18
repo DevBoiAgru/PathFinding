@@ -55,12 +55,3 @@ std::array<Node*, 4> Maze::getNeighbours(Node* target) {
 	std::array<Node*, 4> result{ left, top, right, bottom };
 	return result;
 }
-
-double distanceToPoint(std::array<int, 2> coords1, std::array<int, 2> coords2) {
-	int x1 = coords1[0];
-	int y1 = coords1[1];
-	int x2 = coords2[0];
-	int y2 = coords2[1];
-
-	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-}

@@ -14,5 +14,3 @@ public:
 	std::array<Node*, 4> getNeighbours(Node* target);
 	void display();
 };
-
-double distanceToPoint(std::array<int, 2> coords1, std::array<int, 2> coords2);
