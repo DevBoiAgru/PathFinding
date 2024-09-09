@@ -10,7 +10,7 @@ static int WinMain(){
 	sf::RenderWindow window(sf::VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "Path finding");
 	sf::Font font;
 	if (DISPLAY_COORDS) {
-		if (!font.loadFromFile("assets/Roboto-Medium.ttf"))
+		if (!font.loadFromFile("assets/Roboto-Medium.ttf"))	// Load font, not included in project.
 			std::cerr << "Failed to load font!";
 	}
 
