@@ -7,6 +7,7 @@ enum NodeState {
 	Undiscovered,
 	Goal,
 	Start,
+	Path,
 	Blocking
 };
 
@@ -16,6 +17,4 @@ public:
 	std::array<int, 2> coords;
 	NodeState state{Undiscovered};
 	Node* parent = nullptr;
-	void display();
-	void displayState();
 };

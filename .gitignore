@@ -36,3 +36,11 @@ vcpkg_installed/
 
 # visual studio
 .vs/
+PathFinding/
+
+# Debug builds
+x64/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user

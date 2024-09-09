@@ -14,16 +14,7 @@ Maze::Maze(int width, int height) {
 		grid.push_back(row);
 	}
 }
-void Maze::display() {
-	for (auto i : grid) {
-		for (auto j : i) {
-			std::cout << "(" << j->coords[0] << ", " << j->coords[1] << ")  ";
-			//std::cout << j->coords[0] << j->coords[1] << " ";
-		}
-		std::cout << "\n";
-	}
-	std::cout << "\nGrid height: " << gridHeight << "\nGrid width: " << gridWidth;
-}
+
 std::array<Node*, 4> Maze::getNeighbours(Node* target) {
 	int x = target->coords[0];
 	int y = target->coords[1];

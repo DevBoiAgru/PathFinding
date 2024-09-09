@@ -1,18 +1,31 @@
 #include "Pathfinding.h"
 
-bool DISPLAY_COORDS{ true };
 
-int main(){
+// Only need one size because everything is square
+constexpr int MAZE_SIZE = 25;
+constexpr int WINDOW_SIZE = 1000;
 
-	Maze maze(25, 25);
-	sf::RenderWindow window(sf::VideoMode(1000, 1000), "Path finding");
+constexpr int START_X = 15, START_Y = 17, GOAL_X = 2, GOAL_Y = 2;
+
+bool DISPLAY_COORDS{ false };
+
+int main(int argc, char** argv){
+	if (argc > 1) {
+		if (strcmp("coords", argv[1]))
+			DISPLAY_COORDS = true;
+	}
+
+	Maze maze(MAZE_SIZE, MAZE_SIZE);
+	sf::RenderWindow window(sf::VideoMode(WINDOW_SIZE, WINDOW_SIZE), "Path finding");
 	sf::Font font;
-	if (!font.loadFromFile("Roboto-Medium.ttf"))
-		std::cerr << "Failed to load font";
+	if (DISPLAY_COORDS) {
+		if (!font.loadFromFile("Assets/Roboto-Medium.ttf"))
+			std::cerr << "Failed to load font!";
+	}
 
 	Node* startNode = nullptr;
 	Node* goalNode = nullptr;
-	std::array<int, 2> start{ 17,20 }, goal{ 7, 2 };
+	std::array<int, 2> start{ START_X,START_Y }, goal{ GOAL_X, GOAL_Y };
 
 	for (auto& row : maze.grid) {
 		for (auto& node : row) {
@@ -36,6 +49,7 @@ int main(){
 			if (event.type == sf::Event::Closed) {
 				window.close();
 			}
+
 			if (event.type == sf::Event::MouseButtonPressed) {
 				int cellX = sf::Mouse::getPosition(window).x / 39;
 				int cellY = sf::Mouse::getPosition(window).y / 39;
@@ -82,22 +96,31 @@ int main(){
 				case Undiscovered:	// White
 					squareColour = sf::Color(255, 255, 255, 255);
 					break;
-				case Discovered:	// Blue
-					squareColour = sf::Color(0, 0, 255, 255);
+				case Discovered:	// Gray
+					squareColour = sf::Color(200, 200, 200, 255);
 					break;
 				case Blocking:		// Black
 					squareColour = sf::Color(0, 0, 0, 255);
 					break;
-				case Goal:			// Red
+				case Goal:			// Blue
+					squareColour = sf::Color(0, 0, 255, 255);
+					break;
+				case Start:			// Red
 					squareColour = sf::Color(255, 0, 0, 255);
 					break;
-				case Start:			// Yellow
-					squareColour = sf::Color(255, 255, 0, 255);
+				case Path:			// Green
+					squareColour = sf::Color(0, 255, 0, 255);
 					break;
-				default:
+				default:			// White
 					squareColour = sf::Color(255, 255, 255, 255);
 					break;
 				};
+
+				// Force goal node be coloured red since we set it to discovered when we find it
+				if (node->coords == goalNode->coords) {
+					squareColour = sf::Color(0, 0, 255, 255);
+				}
+
 				square.setFillColor(squareColour);
 				square.setPosition(sf::Vector2f(7 + node->coords[0] * 39.4, 7 + node->coords[1] * 39.4));
 				window.draw(square);
@@ -120,7 +143,6 @@ int main(){
 }
 
 static bool solve(Maze &maze, Node* &start, Node* &goal) {
-	// Breadth first search
 	std::deque<Node*> frontier;
 	frontier.push_back(start);
 
@@ -129,19 +151,47 @@ static bool solve(Maze &maze, Node* &start, Node* &goal) {
 			std::cerr << "No solution\n";
 			return false;
 		}
-		Node* currentNode = frontier.front();
-		frontier.pop_front();
+
+		// BFS
+		//Node* currentNode = frontier.front();
+		//frontier.pop_front();
+
+		// DFS
+		//Node* currentNode = frontier.back();
+		//frontier.pop_back();
+
+		// idk what this is but it works better than BFS and DFS
+		// Get node closest to the goal node in the frontier and use that
+		int closestNodeIndex = -1;
+		for (int i = 0; i < frontier.size(); i++) {
+			if (closestNodeIndex == -1) {
+				closestNodeIndex = i;
+			}
+			else {
+				if (ManhattanDistance(frontier[i], goal) < ManhattanDistance(frontier[closestNodeIndex], goal)) {
+					closestNodeIndex = i;
+				}
+			}
+		}
+		Node* currentNode = frontier[closestNodeIndex];
+		frontier.erase(frontier.begin() + closestNodeIndex);
 
 		if (currentNode->state == Goal) {
-			std::cout << "Solved!\n";
+
+			while (currentNode->parent != nullptr) {
+				currentNode->state = Path;
+				currentNode = currentNode->parent;				// Backtracking
+			}
 			return true;
 		}
 
 		std::array<Node*, 4> neighbors = maze.getNeighbours(currentNode);
+
 		for (auto neighbor : neighbors) {
-			if (neighbor != NULL && (neighbor->state == Undiscovered || neighbor->state == Goal)) {
+			if (neighbor != NULL && (neighbor->state == Undiscovered || neighbor->state == Goal || neighbor->state == Path)) {
+				neighbor->parent = currentNode;
 				frontier.push_back(neighbor);
-				if (neighbor->state == Undiscovered)
+				if (neighbor->state == Undiscovered || neighbor->state == Path)
 					neighbor->state = Discovered;
 			}
 		}
