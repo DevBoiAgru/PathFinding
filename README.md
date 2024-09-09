@@ -10,8 +10,10 @@
 # Controls
 - Left click on a tile to create a black tile (Wall) on that node and right click to remove it.
 
-## Building
-Replace the WinMain() function in the PathFinding.cpp with main()
+# Building instuctions
+- Replace the WinMain() function in the PathFinding.cpp with main()
+- Install SFML
+- Build the project
 
 # Contributing
 I made this project for the sole purpose of learning C++, hence it is far from a finished project. If you would like to contribute, feel free to open an issue or pull request containing your changes or suggestions.
