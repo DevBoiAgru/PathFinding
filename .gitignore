@@ -33,6 +33,8 @@
 
 # vcpkg
 vcpkg_installed/
+vcpkg.json
+vcpkg-configuration.json
 
 # visual studio
 .vs/
