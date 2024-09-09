@@ -1,25 +1,16 @@
 #include "Pathfinding.h"
 
+constexpr int MAZE_SIZE_X = 25, MAZE_SIZE_Y = 25;
+constexpr int WINDOW_SIZE_X = 1000, WINDOW_SIZE_Y = 1000;
+constexpr int START_X = 22, START_Y = 22, GOAL_X = 2, GOAL_Y = 2;
+constexpr bool DISPLAY_COORDS{ false };
 
-// Only need one size because everything is square
-constexpr int MAZE_SIZE = 25;
-constexpr int WINDOW_SIZE = 1000;
-
-constexpr int START_X = 15, START_Y = 17, GOAL_X = 2, GOAL_Y = 2;
-
-bool DISPLAY_COORDS{ false };
-
-int main(int argc, char** argv){
-	if (argc > 1) {
-		if (strcmp("coords", argv[1]))
-			DISPLAY_COORDS = true;
-	}
-
-	Maze maze(MAZE_SIZE, MAZE_SIZE);
-	sf::RenderWindow window(sf::VideoMode(WINDOW_SIZE, WINDOW_SIZE), "Path finding");
+static int WinMain(){
+	Maze maze(MAZE_SIZE_X, MAZE_SIZE_Y);
+	sf::RenderWindow window(sf::VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "Path finding");
 	sf::Font font;
 	if (DISPLAY_COORDS) {
-		if (!font.loadFromFile("Assets/Roboto-Medium.ttf"))
+		if (!font.loadFromFile("assets/Roboto-Medium.ttf"))
 			std::cerr << "Failed to load font!";
 	}
 
